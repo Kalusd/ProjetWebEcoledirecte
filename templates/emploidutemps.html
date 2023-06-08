@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+{% block title %}Emploi du temps - EcoleDirecte+{% endblock %}
+{% block content %}
+
+    <style>
+        .container {
+            height: 300px;
+            overflow: auto; /* Enable scrollbar */
+        }
+        .table-container {
+            width: 100%;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse; /* Merge border spacing between cells */
+        }
+        th{
+            background-color: #f2f2f2;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .navbarED {
+			display: flex;
+  			flex-direction: row;
+			overflow: hidden;
+		}
+		.navbarED a {
+			float: left;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+		}
+		.navbarED a:hover {
+			background-color: #f2f2f2;
+			color: #666666;
+		}
+        @media (max-width: 600px) {
+            table {
+                display: block;
+                overflow: auto; /* Enable scrolling on small screens */
+
+            }
+            th {
+                background-color: #f2f2f2;
+            }
+            td::before {
+                content: attr(data-label);
+                font-weight: bold;
+                display: block;
+                margin-bottom: 5px;
+            }
+            .navbarED {
+			display: flex;
+  			flex-direction: row;
+			overflow: hidden;
+			}
+			.navbarED a {
+				float: left;
+				text-align: center;
+				padding: 14px 16px;
+				text-decoration: none;
+			}
+			.navbarED a:hover {
+				background-color: #f2f2f2;
+				color: #666666;
+			}
+        }
+    </style>
+
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+                <h1>Emploi du temps</h1>
+                <br>
+                <br>
+                <br>
+                <div class="container">
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Matière</th>
+                                    <th>Prof</th>
+                                    <th>Salle</th>
+                                    <th>Heure de début</th>
+                                    <th>Heure de fin</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for cours in coursTries %}
+                                    <tr>
+                                        <td>{{ cours.matiere }}</td>
+                                        <td>{{ cours.prof }}</td>
+                                        <td>{{ cours.salle }}</td>
+                                        <td>{{ cours.start_date }}</td>
+                                        <td>{{ cours.end_date }}</td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="navbarED">
+                    <a href="prochaincours">Prochain cours</a>
+                    <a href="emploidutemps">Emploi du temps</a>
+                    <a href="/">Accueil</a>
+                </div>	 
+            </div>
+        </div>
+    </div>
+{% endblock %}

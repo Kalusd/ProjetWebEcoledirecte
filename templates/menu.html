@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% block title %}Menu - EcoleDirecte+{% endblock %}
+{% block content %}
+
+    <style>
+        .wrap-login100 {
+            padding: 60px 60px 60px 60px;
+            justify-content: space-around;
+        }
+        
+        .navbarED {
+			display: flex;
+  			flex-direction: row;
+			overflow: hidden;
+		}
+		.navbarED a {
+			float: left;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+		}
+		.navbarED a:hover {
+			background-color: #f2f2f2;
+			color: #666666;
+		}
+        
+        @media (max-width: 600px) {
+            .wrap-login100 {
+                padding: 60px 60px 60px 60px;
+                justify-content: space-around;
+            }
+            .navbarED {
+                display: flex;
+                flex-direction: column;
+                overflow: hidden;
+                justify-content: center;
+                align-items: center;
+                height: 100vh; /* Adjust this if needed */
+			}
+			.navbarED a {
+				text-align: center;
+				padding: 14px 16px;
+				text-decoration: none;
+			}
+			.navbarED a:hover {
+				background-color: #f2f2f2;
+				color: #666666;
+			}
+        }
+        @media (max-width: 250px) {
+            .wrap-login100 {
+                padding: 0px 0px 0px 0px;
+            }
+            .navbarED {
+                display: flex;
+                flex-direction: column;
+                overflow: hidden;
+                justify-content: center;
+                align-items: center;
+                height: 100vh; /* Adjust this if needed */
+			}
+			.navbarED a {
+				text-align: center;
+				padding: 14px 16px;
+				text-decoration: none;
+			}
+			.navbarED a:hover {
+				background-color: #f2f2f2;
+				color: #666666;
+			}
+        }
+    </style>
+
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+                <div class="navbarED">
+                    <a href="prochaincours">Prochain cours</a>
+                    <a href="emploidutemps">Emploi du temps</a>
+                    <a href="/">Accueil</a>
+                </div>	 
+            </div>
+        </div>
+    </div>
+{% endblock %}

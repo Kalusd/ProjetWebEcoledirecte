@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block title %}Prochain cours - EcoleDirecte+{% endblock %}
+{% block content %}
+
+	<style>
+		.navbarED {
+			display: flex;
+  			flex-direction: column;
+			overflow: hidden;
+		}
+		.navbarED a {
+			float: left;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+		}
+		.navbarED a:hover {
+			background-color: #f2f2f2;
+			color: #666666;
+		}
+		@media (max-width: 600px) {
+            .navbarED {
+			display: flex;
+  			flex-direction: row;
+			overflow: hidden;
+			}
+			.navbarED a {
+				float: left;
+				text-align: center;
+				padding: 14px 16px;
+				text-decoration: none;
+			}
+			.navbarED a:hover {
+				background-color: #f2f2f2;
+				color: #666666;
+			}
+        }
+	</style>
+
+	<div class="limiter">
+		<div class="container-login100">
+		<div class="wrap-login100">
+			<div>
+				<h1>Prochain cours :</h1>
+				<br>
+				<h4>{{varsCours['matiere']}}</h4>
+				<h5>De : {{varsCours['start_date']}}</h5>
+				<h5>À : {{varsCours['end_date']}}</h5>
+				<h5>En : {{varsCours['salle']}}</h5>
+				<h5>Avec : {{varsCours['prof']}}</h5>
+			</div>
+			<div class="navbarED">
+				<a href="prochaincours">Prochain cours</a>
+				<a href="emploidutemps">Emploi du temps</a>
+				<a href="/">Accueil</a>
+			</div>
+		</div>
+		</div>
+	</div>
+{% endblock %}
