@@ -45,7 +45,7 @@ Ces codes d'erreurs sont tirés de la documentation non officielle de l'API cit�
 
 - 40129 : Format JSON invalide.  
 
-## MILESTONES  
+## ETAPES  
 
 ### GENERALES  
 
@@ -92,12 +92,3 @@ Le reste des modules sont soit inutiles, soit inaccessibles a cause de leur fonc
 - main.py : ancien script pour l'ancienne API d'ED.    
 - readme.md : fichier actuel, permettant la compréhension de cette partie du projet.     
 - rewrite.py : réecriture complète du script a des fins d'optimisation et afin qu'il fonctionne avec la nouvelle version de l'API.  
-
-# REMERCIEMENTS  
-
-Un grand merci pour leur aide précieuse dans certains moments critiques à :  
-- [florian-lefebvre#1325](https://discordapp.com/users/371564915414007809)  
-- [MaitreRouge#6916](https://discordapp.com/users/300910791362740224)  
-- [JsonLines#6725](https://discordapp.com/users/295910954305191936)  
-- [arossfelder#0454](https://discordapp.com/users/774970245156438066)  
-- [El_will64#3283](https://discordapp.com/users/475424371507462145)  
